@@ -1,7 +1,7 @@
 from django.db.models import fields
 from rest_framework.relations import PrimaryKeyRelatedField
 from rest_framework.serializers import ModelSerializer
-from .serializers import EditorialSerializer
+from editorials.serializers import EditorialSerializer
 from .models import Book, Autor
 class BookSerializer(ModelSerializer):
     
