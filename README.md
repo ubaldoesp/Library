@@ -46,7 +46,7 @@ API de libreria donde relaciona los autores y editoriales de los libros
 
 ![test](Screenshots/test.PNG)
 
-![Reporte](Screenshots/coverage.PNG)
+![Reporte](Screenshots/coverage_report.PNG)
 
 ## Ejemplo de la Api corriendo
 
@@ -60,14 +60,14 @@ API de libreria donde relaciona los autores y editoriales de los libros
 
 - Update | Books
 
-![Update Book](https://github.com/ubaldoesp/Library/blob/main/Screenshots/put_books.PNG?raw=true)
+![Update Book](https://github.com/ubaldoesp/Library/blob/main/Screenshots/put_book.PNG?raw=true)
 
 ## Admin Panel
 - http://127.0.0.1:8090/admin
 
 Las operaciones básicas de CRUD también se pueden realizar desde la interfaz de administración de Django y Django Rest Framework.
 
-![django-admin](screenshots/admin_panel.PNG)
+![django-admin](Screenshots/admin_panel.PNG)
 
 - http://127.0.0.1:8090/books/
 - http://127.0.0.1:8090/autors/
