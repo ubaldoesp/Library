@@ -1,0 +1,705 @@
+{
+	"info": {
+		"_postman_id": "5ecc055c-79b2-4cd0-8e0f-05f60dec0fcc",
+		"name": "Library",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Books",
+			"item": [
+				{
+					"name": "Book list",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "Oddie123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "Ubaldo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Don quijote de la mancha\",\r\n        \"pages\": 1345,\r\n        \"published\": true,\r\n        \"publication_date\": \"1965-01-16\",\r\n        \"edition\": 1,\r\n    \"autor\": [\r\n        1\r\n        ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/books/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"books",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get only one book",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Host",
+								"value": "http:127.0.0.1:8090",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{host}}/books/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"books",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Book",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "Oddie123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "Ubaldo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Don quijote de la mancha\",\r\n        \"pages\": 1345,\r\n        \"published\": true,\r\n        \"publication_date\": \"1965-01-16\",\r\n        \"edition\": 1,\r\n    \"autor\": [\r\n        1\r\n        ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/books/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"books",
+								""
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update data",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "Oddie123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "Ubaldo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Don quijote de la mancha2\",\r\n        \"pages\": 13,\r\n        \"published\": true,\r\n        \"publication_date\": \"1965-01-16\",\r\n        \"edition\": 1,\r\n    \"autor\": [\r\n        1\r\n        ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/books/1/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"books",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update only one data",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "Oddie123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "Ubaldo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Don quijote de la\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/books/1/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"books",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete book",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjM0NTkxODM2LCJpYXQiOjE2MzQ1MDU0MzYsImp0aSI6IjhjMTc5NWQ5YzIwYjQ4MWZiMjYzZDQ0NWQ1NjA2NmJlIiwidXNlcl9pZCI6M30.fP8gy5MepZ_-RXfKnaRiyRYk6Wg-Ks7LW315gQUFAV8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/books/2/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"books",
+								"2",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Action only book and only editorial",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/books/1/editorial/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"books",
+								"1",
+								"editorial",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Action only book and only autors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/books/1/editorial/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"books",
+								"1",
+								"editorial",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Editorials",
+			"item": [
+				{
+					"name": "Editorials list",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "Oddie123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "Ubaldo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "host",
+								"value": "127.0.0.1:8090",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/editorials/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"editorials",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get only one editorial",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				},
+				{
+					"name": "Create Editorial",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "Oddie123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "Ubaldo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Librería planetas\",\r\n    \"mail\": \"planets@gmail.com\",\r\n    \"web_page\": \"www.planets.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/editorials/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"editorials",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Editorial",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "Oddie123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "Ubaldo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Librería\",\r\n    \"mail\": \"planets@gmail.com\",\r\n    \"web_page\": \"www.planets.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/editorials/1/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"editorials",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update only one data",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "Oddie123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "Ubaldo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Librería de los planetas\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/editorials/1/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"editorials",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Autors",
+			"item": [
+				{
+					"name": "Autors list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/autors/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"autors",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get only one autor",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/autors/1/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"autors",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Autor",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "Oddie123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "Ubaldo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"name\": \"Edgar adam poe\",\r\n        \"age\": 35,\r\n        \"date_of_birth\": \"1923-12-15\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/autors/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"autors",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Editorial",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "Oddie123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "Ubaldo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"name\": \"Edgar\",\r\n        \"age\": 35,\r\n        \"date_of_birth\": \"1923-12-15\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/autors/6/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"autors",
+								"6",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update only one data of autors",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "Oddie123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "Ubaldo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"name\": \"Edgar Adam Poe\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/autors/1/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"autors",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Token",
+			"item": [
+				{
+					"name": "Generate Token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/token",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"token"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "http://127.0.0.1:8090",
+			"disabled": true
+		}
+	]
+}

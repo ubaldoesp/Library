@@ -1,9 +1,9 @@
 from django.db import models
 from rest_framework.serializers import ModelSerializer
-from .models import Autor
+from autors.models import Autor
 
 class AutorSerializer(ModelSerializer):
     
     class Meta:
         model = Autor
-        fields = '__all__'
+        fields = ('name','age','date_of_birth')

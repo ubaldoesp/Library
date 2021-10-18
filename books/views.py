@@ -1,3 +1,5 @@
+from django.db.models import query
+from django.http import request
 from django.shortcuts import render
 from copy import copy
 from rest_framework import  status
@@ -8,7 +10,7 @@ from books.serializers import BookSerializer, CreateBookSerializer, \
 EditorialSerializer
 from autors.serializers import AutorSerializer
 from Library.permissions import AllPermissions
-from .models import Autor, Editorial, Book
+from books.models import Autor, Editorial, Book
 
 # Create your views here.
 
@@ -30,11 +32,18 @@ class BookViewSet(ModelViewSet):
         return Response(status=status.HTTP_201_CREATED,
                         data=serialized.data)
     
-    def get_serializer_class(self):
-        if self.request.method == 'POST':
-            return CreateBookSerializer
-        if self.request.method == 'GET':
-            return BookSerializer
+    def get_queryset(self):
+        data ={}
+        for k,v in self.request.query_params.items():
+            if k in ['page','limit','offset']:
+                continue
+        return self.queryset.filter(**data)
+    
+    # def get_serializer_class(self):
+    #     if self.request.method == 'POST':
+    #         return CreateBookSerializer
+    #     if self.request.method == 'GET':
+    #         return BookSerializer
 
 
     

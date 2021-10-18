@@ -6,7 +6,7 @@ class EditorialSerializer(ModelSerializer):
     
     class Meta:
         model = Editorial
-        fields = ('name', 'web_page')
+        fields = ('name', 'mail', 'web_page')
     
 class CreateEditorialSerializer(ModelSerializer):
     

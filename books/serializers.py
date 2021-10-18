@@ -2,9 +2,9 @@ from django.db.models import fields
 from rest_framework.relations import PrimaryKeyRelatedField
 from rest_framework.serializers import ModelSerializer
 from editorials.serializers import EditorialSerializer
-from .models import Book, Autor
+from books.models import Book
+from autors.models import Autor
 class BookSerializer(ModelSerializer):
-    
     editorial = EditorialSerializer(read_only=True)
     
     class Meta:
