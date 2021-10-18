@@ -23,7 +23,7 @@ API de libreria donde relaciona los autores y editoriales de los libros
 ```
 
 #### Mode lo entidad relación
-![Relación entre tablas](Screenshots/model.png)
+![Relación entre tablas](Screenshots/model.PNG)
 
 
 ## Correr API Server
