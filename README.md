@@ -23,7 +23,7 @@ API de libreria donde relaciona los autores y editoriales de los libros
 ```
 
 #### Mode lo entidad relación
-![Relación entre tablas](Screenshots/model.png)
+![Relación entre tablas](Screenshots/model.PNG)
 
 
 ## Correr API Server
@@ -31,7 +31,7 @@ API de libreria donde relaciona los autores y editoriales de los libros
 > python manage.py runserver
 ```
 ## Lista de Request de Postman
-![Colección de Postman](Screenshots/api_books.png)
+![Colección de Postman](Screenshots/api_books.PNG)
 
 - [Library Colección de la Api](https://github.com/ubaldoesp/Library/tree/main/postman)
 
@@ -44,30 +44,30 @@ API de libreria donde relaciona los autores y editoriales de los libros
 > coverage report
 ```
 
-![test](Screenshots/test.png)
+![test](Screenshots/test.PNG)
 
-![Reporte](Screenshots/coverage.png)
+![Reporte](Screenshots/coverage_report.PNG)
 
 ## Ejemplo de la Api corriendo
 
 - List | Books
 
-![Get list books](https://github.com/ubaldoesp/Library/blob/main/Screenshots/list_books.png?raw=true)
+![Get list books](https://github.com/ubaldoesp/Library/blob/main/Screenshots/list_books.PNG?raw=true)
 
 - Create | Books
 
-![Create book](https://github.com/ubaldoesp/Library/blob/main/Screenshots/create_book.png?raw=true)
+![Create book](https://github.com/ubaldoesp/Library/blob/main/Screenshots/create_book.PNG?raw=true)
 
 - Update | Books
 
-![Update Book](https://github.com/ubaldoesp/Library/blob/main/Screenshots/put_books.png?raw=true)
+![Update Book](https://github.com/ubaldoesp/Library/blob/main/Screenshots/put_book.PNG?raw=true)
 
 ## Admin Panel
 - http://127.0.0.1:8090/admin
 
 Las operaciones básicas de CRUD también se pueden realizar desde la interfaz de administración de Django y Django Rest Framework.
 
-![django-admin](screenshots/admin_panel.png)
+![django-admin](Screenshots/admin_panel.PNG)
 
 - http://127.0.0.1:8090/books/
 - http://127.0.0.1:8090/autors/
